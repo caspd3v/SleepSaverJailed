@@ -14,6 +14,7 @@
 		821A7E06269263060044AC7D /* ScreenSaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821A7E05269263060044AC7D /* ScreenSaverTests.swift */; };
 		821A7E11269263060044AC7D /* ScreenSaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821A7E10269263060044AC7D /* ScreenSaverUITests.swift */; };
 		82844AB12694AD86009B1CA5 /* screen1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 82844AB02694AD86009B1CA5 /* screen1.m4v */; };
+		828DA45F2696D7D100CA321A /* screen2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 828DA45E2696D7D100CA321A /* screen2.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		821A7E10269263060044AC7D /* ScreenSaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSaverUITests.swift; sourceTree = "<group>"; };
 		821A7E12269263060044AC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82844AB02694AD86009B1CA5 /* screen1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = screen1.m4v; path = ../../../../Desktop/screen1.m4v; sourceTree = "<group>"; };
+		828DA45E2696D7D100CA321A /* screen2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = screen2.m4v; path = ../../../../Desktop/screen2.m4v; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				821A7DF3269263050044AC7D /* ScreenSaverApp.swift */,
 				821A7DF5269263050044AC7D /* ContentView.swift */,
 				82844AB02694AD86009B1CA5 /* screen1.m4v */,
+				828DA45E2696D7D100CA321A /* screen2.m4v */,
 				821A7DF7269263060044AC7D /* Assets.xcassets */,
 				821A7DFC269263060044AC7D /* Info.plist */,
 				821A7DF9269263060044AC7D /* Preview Content */,
@@ -238,6 +241,7 @@
 			files = (
 				821A7DFB269263060044AC7D /* Preview Assets.xcassets in Resources */,
 				82844AB12694AD86009B1CA5 /* screen1.m4v in Resources */,
+				828DA45F2696D7D100CA321A /* screen2.m4v in Resources */,
 				821A7DF8269263060044AC7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
