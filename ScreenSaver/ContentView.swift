@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import AVKit
 import AVFoundation
 
@@ -66,12 +67,32 @@ final class WelcomeVideoController1 : UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: AVPlayerViewController, context: UIViewControllerRepresentableContext<WelcomeVideoController1>) {
     }
 }
+class BatteryModel : ObservableObject {
+    @Published var level = UIDevice.current.batteryLevel
+    private var cancellableSet: Set<AnyCancellable> = []
 
+    init () {
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        assignLevelPublisher()
+    }
+
+    private func assignLevelPublisher() {
+        _ = UIDevice.current
+            .publisher(for: \.batteryLevel)
+            .assign(to: \.level, on: self)
+            .store(in: &self.cancellableSet)
+    }
+}
 struct ContentView: View {
     
-    @State private var showingGame = true
 
+    @ObservedObject var batteryModel = BatteryModel()
+    
+    @State private var showingGame = true
+    
+    
     var body: some View {
+        
         ZStack {
             
             if showingGame {
@@ -93,6 +114,14 @@ struct ContentView: View {
 ) {
                         Image("settings").resizable().frame(minWidth:0,maxWidth:.infinity,minHeight:0,maxHeight: .infinity).padding(30.0).opacity(0.0)
                     }
+                }
+                Spacer()
+            }
+            VStack {
+                HStack{
+                    Text("Battery: \(Int(round(batteryModel.level * 100)))%")
+                        .padding(40.0)
+                    
                 }
                 Spacer()
             }
