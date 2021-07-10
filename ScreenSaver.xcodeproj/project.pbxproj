@@ -15,6 +15,7 @@
 		821A7E11269263060044AC7D /* ScreenSaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821A7E10269263060044AC7D /* ScreenSaverUITests.swift */; };
 		82844AB12694AD86009B1CA5 /* screen1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 82844AB02694AD86009B1CA5 /* screen1.m4v */; };
 		828DA45F2696D7D100CA321A /* screen2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 828DA45E2696D7D100CA321A /* screen2.m4v */; };
+		82BEFC5B2699499800CB024A /* earth.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 82BEFC5A2699499700CB024A /* earth.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		821A7E12269263060044AC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82844AB02694AD86009B1CA5 /* screen1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = screen1.m4v; path = ../../../../Desktop/screen1.m4v; sourceTree = "<group>"; };
 		828DA45E2696D7D100CA321A /* screen2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = screen2.m4v; path = ../../../../Desktop/screen2.m4v; sourceTree = "<group>"; };
+		82BEFC5A2699499700CB024A /* earth.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = earth.mp4; path = ../../../../Desktop/earth.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				821A7DF5269263050044AC7D /* ContentView.swift */,
 				82844AB02694AD86009B1CA5 /* screen1.m4v */,
 				828DA45E2696D7D100CA321A /* screen2.m4v */,
+				82BEFC5A2699499700CB024A /* earth.mp4 */,
 				821A7DF7269263060044AC7D /* Assets.xcassets */,
 				821A7DFC269263060044AC7D /* Info.plist */,
 				821A7DF9269263060044AC7D /* Preview Content */,
@@ -243,6 +246,7 @@
 				82844AB12694AD86009B1CA5 /* screen1.m4v in Resources */,
 				828DA45F2696D7D100CA321A /* screen2.m4v in Resources */,
 				821A7DF8269263060044AC7D /* Assets.xcassets in Resources */,
+				82BEFC5B2699499800CB024A /* earth.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +439,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.casp.ScreenSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -457,6 +462,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.casp.ScreenSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
