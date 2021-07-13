@@ -98,27 +98,10 @@ final class Earth : UIViewControllerRepresentable {
 }
 
 
-//Battery % Breaks App When Plugged In
-//class BatteryModel : ObservableObject {
-   // @Published var level = UIDevice.current.batteryLevel
-   // private var cancellableSet: Set<AnyCancellable> = []
-
-    //init () {
-      //  UIDevice.current.isBatteryMonitoringEnabled = true
-       // assignLevelPublisher()
-//}
-
-    // private func assignLevelPublisher() {
-       // _ = UIDevice.current
-       //     .publisher(for: \.batteryLevel)
-       //     .assign(to: \.level, on: self)
-       //     .store(in: &self.cancellableSet)
-   // }
-//}
 
 struct ContentView: View {
     
-   //@ObservedObject var batteryModel = BatteryModel()
+    @State private var hideStatusBar = true
     @State var screens = 0
     
     func screenView() -> AnyView {
@@ -131,11 +114,8 @@ struct ContentView: View {
             return AnyView(tnineteen())
          }
     }
-    //struct VisualEffectView: UIViewRepresentable {
-      //  var effect: UIVisualEffect?
-        //func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
-        //func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
-    //}
+
+    
     
     var body: some View {
         
@@ -144,21 +124,6 @@ struct ContentView: View {
             screenView().frame(idealWidth:230,idealHeight:500).aspectRatio(contentMode: .fill)
                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-            
-            //VStack {
-                //HStack{
-                    //ZStack{
-                        //VisualEffectView(effect: UIBlurEffect(style: .dark)).frame(width:170,height:40).cornerRadius(30)
-                    //Text("\(Int(round(batteryModel.level * 100)))%")
-                        //.font(.headline)
-                        //.fontWeight(.heavy)
-                        //.foregroundColor(Color.green).frame(width:170,height:40).cornerRadius(30)
-                        
-                    
-                //}.padding(40.0)
-                //}
-               // Spacer()
-            //}
             
             VStack {
                 
@@ -179,9 +144,10 @@ struct ContentView: View {
             }
             
         }
+        
+        .statusBar(hidden: hideStatusBar)
     }
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {
